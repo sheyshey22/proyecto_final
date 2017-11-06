@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	<img src="logo.jpg" alt="pinterest">
+	      </a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <form class="navbar-form navbar-left">
+	        <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search" name="search">
+		      <div class="input-group-btn">
+		        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+		      </div>
+		    </div>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Inicio</a></li>
+	       	<li><a href="#">User</a></li>
+	       	<li><a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<!-- /Lista imagenes -->
+	<section class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="img_pinterest" ></div>
+			</div>
+			<div class="col-md-4">
+				<div class="list_sec" > </div>
+			</div>
+			<div class="col-md-4">
+				<div class="list_third" > </div>
+			</div>
+		</div>
+
+	</section>
+
+	<script
+		src="https://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+		crossorigin="anonymous"></script>
+
+
+	<script type="text/javascript" src="plugin.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('.img_pinterest').pinterest(
+				["736x/83/60/64/8360649102091bd4749de35bdae8059f.jpg", 
+				"736x/bd/0d/87/bd0d875a2de33af0db661005ee388aea.jpg",
+				"74x/9e/30/e5/9e30e5619e512e82d56c43fe2d14c4ad.jpg"]
+			);
+
+			$('.list_sec').pinterest(
+				[
+					"474x/f2/bd/3b/f2bd3bb18f379e3cbb452c6efd1a5f23.jpg",
+					"36x/0e/77/8f/0e778f35fd155edb91c42c2b7437de04.jpg",
+					"236x/90/72/59/907259ff0f116b6a98e9ca96816b6c40.jpg"
+
+				],
+				200,
+				160
+			);
+			$('.list_third').pinterest(
+				[
+					"236x/bf/ac/0a/bfac0a09312cc52d362e4b30668ffce2.jpg",
+					"236x/4e/61/f2/4e61f243486384db67f108e343c120b5.jpg",
+					"474x/fc/55/d4/fc55d49c32562a840f6a30758cbb4b28.jpg"
+
+				],
+				200,
+				160
+			);
+		});
+	</script>
+	<script src="lab.js"></script>
+</body>
+</html>
